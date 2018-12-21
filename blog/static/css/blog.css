@@ -1,3 +1,10 @@
+body {
+    font-family: verdana, arial, helvetica, sans-serif;
+    line-height: normal;
+    font-size: medium;
+    font-weight: normal;
+}
+
 h1 a, h2 a {
     color: #126ce2;
     font-family: 'Roboto';
@@ -11,7 +18,7 @@ h1 a, h2 a {
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
     color: #126ce2;
     font-weight: bolder;
-    font-size: 46pt;
+    font-size: 16px;
     text-decoration: none;
 }
 
@@ -22,6 +29,7 @@ h1 a, h2 a {
 h1, h2, h3, h4 {
     color: #126ce2;
     font-family: 'Roboto';
+    font-size: medium;
 }
 
 .date {
