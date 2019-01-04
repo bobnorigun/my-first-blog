@@ -13,18 +13,18 @@ h1 a, h2 a {
 .page-header {
     background-color: #ffffff;
     margin-top: 0;
-    padding: 10px 10px 10px 20px;
+    padding: 5px 5px 5px 10px;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
     color: #126ce2;
     font-weight: bolder;
-    font-size: 16px;
+    font-size: 18px;
     text-decoration: none;
 }
 
 .content {
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 h1, h2, h3, h4 {
@@ -47,8 +47,8 @@ h1, h2, h3, h4 {
 .top-menu, .top-menu:hover, .top-menu:visited {
     color: #126ce2;
     float: right;
-    margin-right: 20px;
-    margin-top: 15px;
+    margin-right: 10px;
+    margin-top: 10px;
 }
 
 .post {
