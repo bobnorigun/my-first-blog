@@ -68,5 +68,5 @@ h2, h3, h4 {
 }
 
 a {
-    overflow:hidden;word-break:break-all
+    overflow:hidden; word-break:break-all;
 }
