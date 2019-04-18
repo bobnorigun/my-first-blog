@@ -10,6 +10,7 @@ body {
 h1 a, h2 a {
     font-weight: 600;
     color: #0000ff;
+    word-break:break-all;
 }
 .page-header {
     background-color: #ffffff;
