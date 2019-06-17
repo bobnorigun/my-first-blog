@@ -1,0 +1,50 @@
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #343a40;
+}
+
+a, a:visited, a:active {
+    overflow: hidden;
+    word-break: break-all;
+    color: #000000;
+}
+
+.page-header {
+    margin-top: 0;
+    padding-top: 1em;
+    padding-bottom: 1.5em;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    text-decoration: none;
+}
+
+.date {
+    font-size: x-small;
+}
+
+h4, h5, h6 {
+    font-weight: bolder;
+    line-height: normal;
+}
+
+.post-form textarea, .post-form input {
+    width: 100%;
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+    float: right;
+}
+
+.post {
+    margin-bottom: 2rem;
+}
+
+.comment_btn {
+    margin-bottom: 1rem;
+    text-align: right;
+}
+
+.comment {
+    margin: 0em 1em 1em 1em;
+}
