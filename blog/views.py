@@ -6,7 +6,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from django.views import generic
 
-from .models import Post, Choice, Question
+from .models import Post
 from .forms import PostForm
 
 # blog
