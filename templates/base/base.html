@@ -14,7 +14,7 @@
             <div class="page-header">
                 <h5>
                     {% if user.is_authenticated %}
-                    <a href="/">{{ user.username }}</a> <small><a href="{% url 'blog:post_list' %}">Wall</a></small>
+                    <a href="/">"{{ user.username }}"</a> <small><a href="{% url 'blog:post_list' %}">Wall</a></small>
                     <p class="top-menu"> 
                     <a href="{% url 'blog:post_new' %}"><button type="button" class="btn btn-primary btn-sm">글쓰기</button></a>
                     </p>

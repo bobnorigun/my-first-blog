@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
+from django.core.paginator import Paginator
 # from django.contrib.auth.decorators import login_required
 
 from django.views import generic
@@ -9,7 +10,10 @@ from .forms import PostForm
 
 # blog
 def post_list(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[:3]
+    post_all = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
+    paginator = Paginator(post_all, 4)
+    page = request.GET.get('page')
+    posts = paginator.get_page(page)
     return render(request, 'blog/post_list.html', {'posts': posts})
 
 def post_detail(request, pk):
