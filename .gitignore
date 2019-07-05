@@ -5,3 +5,7 @@ venvgirls
 db.sqlite3
 /static
 .DS_Store
+/media
+/files
+/documents
+/images

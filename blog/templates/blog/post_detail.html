@@ -11,7 +11,9 @@
              <a class="btn btn-default" href="{% url 'blog:post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
         {% endif %}
         <h2>{{ post.title }}</h2>
-        <p>{{ post.text | linebreaksbr | urlize }}</p>
-        <a id="id_uploaded_file" href="{ uploadFileModel.file.url }" download>{ uploadFileModel.file.name }</a>
+        <p>
+        {{ post.text | linebreaksbr | urlize }}
+        <img src="{{ post.photo.url }}" class="img-fluid" alt="Responsive image">
+        </p>
     </div>
 {% endblock %}

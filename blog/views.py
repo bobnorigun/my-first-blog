@@ -2,8 +2,6 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 # from django.contrib.auth.decorators import login_required
 
-from django.http import HttpResponse, HttpResponseRedirect
-from django.urls import reverse
 from django.views import generic
 
 from .models import Post
@@ -20,7 +18,7 @@ def post_detail(request, pk):
 
 def post_new(request):
     if request.method == "POST":
-        form = PostForm(request.POST)
+        form = PostForm(request.POST, request.FILES)
         if form.is_valid():
             post = form.save(commit=False)
             post.author = request.user
