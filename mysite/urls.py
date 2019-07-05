@@ -10,5 +10,4 @@ urlpatterns = [
     path('', include('polls.urls')),
     path('polls/', include('polls.urls')),
     path('wall/', include('blog.urls')),
-    path('pic/', include('files.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
