@@ -1,17 +1,24 @@
 {% extends 'base/base.html' %}
 
+
+
 {% block content %}
 	<small>{{ question.pub_date|date:'M/d(D) h:i' }}</small>
 	<h5>{{ question.question_text }}</h5>
 
-	<div class="row">
+	<div class="card-columns">
 		{% for choice in question.choice_set.all %}
 
-		<div class="col-sm-6">
-		    {{ choice.choice_text }}<br><img src="{{ choice.choice_image.url }}" class="img-fluid" alt="Responsive image"><br>{{ choice.votes }}회
+		<div class="card">
+		    <img src="{{ choice.choice_image.url }}" class="img-fluid" alt="Responsive image">
+		    <div class="card-body">
+		    	<p class="card-text">{{ choice.choice_text }}</p>
+		    	<p class="card-text"><small class="text-muted">{{ choice.votes }}회</small>
+		    </div>
 	    </div>
 
 		{% endfor %}
 	</div>
-	<button type="button" class="btn btn-secondary"><a href="{% url 'polls:detail' question.id %}">다시선택하기</a></button>
+
+	<button type="button" class="btn btn-light"><a href="{% url 'polls:detail' question.id %}">다시선택하기</a></button>
 {% endblock %}

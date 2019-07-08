@@ -10,15 +10,22 @@
 	
 	<form action="{% url 'polls:vote' question.id %}" method="post">
 		{% csrf_token %}
-		<div class="row">
+		<div class="card-columns">
 		{% for choice in question.choice_set.all %}
-			
-			<div class="col-sm-6">
-				<label for="choice{{ forloop.counter }}">
-					<input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
-					{{ choice.choice_text }}<br><img src="{{ choice.choice_image.url }}" class="img-fluid" alt="Responsive image">
-				</label>
-			</div>
+
+			<label for="choice{{ forloop.counter }}">
+				<div class="card">
+					<img src="{{ choice.choice_image.url }}" class="img-fluid" alt="Responsive image">
+					<div class="card-body">
+						<p class="card-text">
+						{{ choice.choice_text }}
+						</p>
+						<p class="card-text">
+							<input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
+						</p>
+					</div>
+				</div>
+			</label>
 			
 		{% endfor %}
 		</div>
