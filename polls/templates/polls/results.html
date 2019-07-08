@@ -4,11 +4,14 @@
 	<small>{{ question.pub_date|date:'M/d(D) h:i' }}</small>
 	<h5>{{ question.question_text }}</h5>
 
-	<ul>
-	{% for choice in question.choice_set.all %}
-	    <li>{{ choice.choice_text }} {{ choice.votes }}회</li>
-	{% endfor %}
-	</ul>
+	<div class="row">
+		{% for choice in question.choice_set.all %}
 
-	<button type="button" class="btn btn-light"><a href="{% url 'polls:detail' question.id %}">다시선택하기</a></button>
+		<div class="col-sm-6">
+		    {{ choice.choice_text }}<br><img src="{{ choice.choice_image.url }}" class="img-fluid" alt="Responsive image"><br>{{ choice.votes }}회
+	    </div>
+
+		{% endfor %}
+	</div>
+	<button type="button" class="btn btn-secondary"><a href="{% url 'polls:detail' question.id %}">다시선택하기</a></button>
 {% endblock %}
