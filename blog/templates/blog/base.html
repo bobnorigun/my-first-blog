@@ -2,6 +2,7 @@
 
 <html>
     <head>
+        <meta charset="utf-8">
         <title>un+plug+ed</title>
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -16,7 +17,7 @@
                     {% if user.is_authenticated %}
                     <a href="/">{{ user.username }}</a> <small><a href="{% url 'blog:post_list' %}">Wall</a></small>
                     <p class="top-menu"> 
-                    <a href="{% url 'blog:post_new' %}"><button type="button" class="btn btn-primary btn-sm">글쓰기</button></a>
+                    <a href="{% url 'blog:post_new' %}"><button type="button" class="btn btn-primary btn-sm">이게 뭘까?</button></a>
                     </p>
                     {% else %}
                     <a href="/">MissLy</a> <small><a href="{% url 'blog:post_list' %}">Wall</a></small>

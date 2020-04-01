@@ -31,6 +31,9 @@ class ResultsView(generic.DetailView):
     model = Question
     template_name = 'polls/results.html'
 
+    def get_queryset(self):
+        return Question.objects.order_by('votes')
+
 def vote(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
     try:
