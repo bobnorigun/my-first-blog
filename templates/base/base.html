@@ -22,7 +22,7 @@
                     <a href="{% url 'blog:post_new' %}"><button type="button" class="btn btn-primary btn-sm">글쓰기</button></a>
                     </p>
                     {% else %}
-                    <a href="/">MissLy</a> <small><a href="{% url 'blog:post_list' %}">Wall</a></small>
+                    <a href="/">MissLy</a> <small><a href="{% url 'blog:post_list' %}">Wall</a> | <a href="{% url 'distsum:imhere' %}">distsum</a></small></small>
                     {% endif %}
                 </h5>
             </div>
