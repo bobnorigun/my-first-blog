@@ -18,7 +18,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'polls',
-    'files',
     'csvfile',
     'caldist',
     'distsum',

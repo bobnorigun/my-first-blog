@@ -9,7 +9,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('polls.urls')),
     path('wall/', include('blog.urls')),
-    path('files/', include('files.urls')),
     path('csvfile/', include('csvfile.urls')),
     path('caldist/', include('caldist.urls')),
     path('distsum/', include('distsum.urls')),

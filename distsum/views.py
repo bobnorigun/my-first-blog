@@ -49,7 +49,7 @@ def calc_dist(lat1, lon1, lat2, lon2):
 
 	return float(earth_radius * c)
 
-"""1번 object와 2번 object의 lat, lon을 불러서 이 거리를 구하면 되는데 이거 ㄹ어떻게 한다?"""
+"""아래 수작업으로 불러 온 좌표값들을 자동으로 생성하고 결과값을 뽑아내는 공식을 만들고 싶어요!!!"""
 
 def caldistview(request):
 	q = Mylocation.objects.get(pk=1)
@@ -122,13 +122,3 @@ def caldistview(request):
 	mydist = calc_dist(q1, q2, r1, r2) + calc_dist(s1, s2, r1, r2) + calc_dist(s1, s2, t1, t2) + calc_dist(u1, u2, t1, t2) + calc_dist(u1, u2, v1, v2) + calc_dist(w1, w2, v1, v2) + calc_dist(w1, w2, x1, x2) + calc_dist(x1, x2, y1, y2) + calc_dist(y1, y2, z1, z2) + calc_dist(a1, a2, z1, z2) + calc_dist(a1, a2, b1, b2) + calc_dist(c1, c2, b1, b2) + calc_dist(c1, c2, d1, d2) + calc_dist(e1, e2, d1, d2) + calc_dist(e1, e2, f1, f2) + calc_dist(g1, g2, f1, f2) + calc_dist(g1, g2, h1, h2) + calc_dist(i1, i2, h1, h2) + calc_dist(i1, i2, j1, j2) + calc_dist(k1, k2, j1, j2) + calc_dist(k1, k2, l1, l2) 
 	fdist = round(mydist,2)
 	return render(request, 'distsum/out.html', {'distance': fdist})
-
-def caldist2(request):
-	allloca = Mylocation.objects.all()
-	for single in allloca:
-		
-		a1 = float(single.lat)
-		a2 = float(single.lon)
-	
-	mydist = calc_dist(a1, a2, )
-
