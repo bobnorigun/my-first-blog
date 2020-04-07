@@ -1,0 +1,13 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+    <!-- memo -->
+    {% for memo in memos %}
+        <div class="post">
+            <p>
+            {{ memo.memotext|linebreaksbr|urlize }}
+    		</p>
+        </div>
+    {% endfor %}
+
+{% endblock %}

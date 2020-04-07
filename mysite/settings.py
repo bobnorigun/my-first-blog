@@ -21,6 +21,7 @@ INSTALLED_APPS = [
     'csvfile',
     'caldist',
     'distsum',
+    'memo',
 ]
 
 MIDDLEWARE = [

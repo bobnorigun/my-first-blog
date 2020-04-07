@@ -12,4 +12,5 @@ urlpatterns = [
     path('csvfile/', include('csvfile.urls')),
     path('caldist/', include('caldist.urls')),
     path('distsum/', include('distsum.urls')),
+    path('memo/', include('memo.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
