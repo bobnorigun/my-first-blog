@@ -7,4 +7,6 @@ app_name = 'memo'
 urlpatterns = [
     path('', views.memo_list, name='memo_list'),
     path('memo/<int:pk>/', views.memo_detail, name='memo_detail'),
+    path('memo/new/', views.memo_new, name='memo_new'),
+    path('event/', views.event),
 ]

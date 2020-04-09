@@ -2,10 +2,13 @@
 
 {% block content %}
     <!-- memo -->
+    <a href="{% url 'memo:memo_new' %}">메모더하기</a>
     {% for memo in memos %}
         <div class="post">
             <p>
+            <a href="{% url 'memo:memo_detail' pk=memo.pk %}">
             {{ memo.memotext|linebreaksbr|urlize }}
+        	</a>
     		</p>
         </div>
     {% endfor %}
