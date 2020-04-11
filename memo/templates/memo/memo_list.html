@@ -1,6 +1,37 @@
-{% extends 'base/base.html' %}
+{% load static %}
 
-{% block content %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>un+plug+ed</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="icon" href="{% static 'favicon/favicon.ico' %}"/>
+    </head>
+    <body onload="processJavascript();">>
+        <div class="container">
+
+<p>This simple example shows how to use the <i>window.AppInventor.getWebViewString()</i> function to pass data to and from the WebViewer component, and thereby an App Inventor app.
+
+<script>
+    var result = new Date().toString();
+    var appInventorInput = window.AppInventor.getWebViewString();
+        function processJavascript() {
+        if (appInventorInput.length > 0) {
+            document.write( "WebView InputString received FROM app:" + appInventorInput );
+            result = appInventorInput.split("").reverse().join("");
+            document.write( "<p/>WebView InputString sending BACK TO app:<br/>" +
+            result );
+        } else {
+            document.write( "No WebView InputString set by app at: <br/>" + result );
+        }
+        window.AppInventor.setWebViewString( result );
+    }
+</script> </p>
+</div>
+<div class="container">
     <!-- memo -->
     <a href="{% url 'memo:memo_new' %}">메모더하기</a>
     {% for memo in memos %}
@@ -13,4 +44,7 @@
         </div>
     {% endfor %}
 
-{% endblock %}
+</p>
+</div>
+</body>
+</html>
